@@ -67,8 +67,8 @@ El diseño propuesto tiene:
 
 ## Entregable
 - Código fuente en Github
-- Incluir en el repositorio la puntuación obtenida (badge) en DeepScan
-- Incluir en el repositorio la puntuación obtenida (badge) en CodeClimate
+- Incluir en el repositorio la puntuación obtenida ([![DeepScan grade](https://deepscan.io/api/teams/12132/projects/15106/branches/297951/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=12132&pid=15106&bid=297951)) en DeepScan
+- Incluir en el repositorio la puntuación obtenida ([![Maintainability](https://api.codeclimate.com/v1/badges/effa8e00fb7d86552d89/maintainability)](https://codeclimate.com/github/GracielaJazmin/Juego/maintainability)) en CodeClimate
 - Documentar en [este archivo](setup/README.md) los pasos necesarios para ejecutar la App
 - [Los commits deben se significativos](https://medium.com/better-programming/you-need-meaningful-commit-messages-d869e44e98d4)
 
