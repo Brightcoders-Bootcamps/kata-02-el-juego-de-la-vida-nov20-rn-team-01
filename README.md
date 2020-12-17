@@ -78,7 +78,15 @@ El diseño propuesto tiene:
 - Implementacón del diseño solicitado
 
 ## Setup
-[Aquí se describen los pasos necesarios para ejecutar y probar este proyecto](setup/README.md)
+1- Iniciar la App
+2- Dar click Start para iniciar iniciar el juego y se genera una iteracion de forma aleatoria
+3- Se muestran dos botones para pasar a la siguiente generación
+  3.1- Hacer click en Next y el juego continuará a la siguiente generación de forma manual
+    3.1.1 Hacer click en coninue para avanzar a la siguiente generación
+  3.2- Hacer click en Auto y el juego continuará a las siguientes generaciones de forma automática o manual
+4- Si se desea detener el juego dar click en el botón Stop
+5- Si se desea reiniciar el juego dar click en Reset
+
 
 ## Recursos
 [Para apoyo de tus actividades utiliza esta lista de recursos recomendados](https://github.com/bright-coders/commons/tree/master/topics/resources-react-native)

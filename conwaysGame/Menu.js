@@ -1,4 +1,5 @@
-import React, {useState, useRef, useCallback} from 'react';
+/* eslint-disable react/prop-types */
+import React, { useState, useRef, useCallback } from 'react';
 import Grid from './Grid';
 import {
   View,
@@ -7,21 +8,21 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  SafeAreaView,
+  SafeAreaView
 } from 'react-native';
 
 const width = Dimensions.get('screen').width;
 
 const Cell = (props) => {
   const grid = props.grid;
-  let status = grid[props.row_index][props.col_index];
+  const status = grid[props.row_index][props.col_index];
   return (
     <View
       style={{
         width: width * 0.1,
         height: 35,
         borderWidth: 1,
-        backgroundColor: status ? '#38b000' : 'darkslategrey',
+        backgroundColor: status ? '#38b000' : 'darkslategrey'
       }}
     />
   );
@@ -38,10 +39,10 @@ const App = () => {
     return Grid.createEmptyGrid();
   });
 
-  const showBtn = start ? {display: 'flex'} : {};
+  const showBtn = start ? { display: 'flex' } : {};
 
-  const autoBtn = autoGame ? {backgroundColor: 'gray'} : {};
-  const showStop = autoGame ? {display: 'flex'} : {};
+  const autoBtn = autoGame ? { backgroundColor: 'gray' } : {};
+  const showStop = autoGame ? { display: 'flex' } : {};
 
   const running_ref = useRef(running);
   running_ref.current = running;
@@ -66,7 +67,7 @@ const App = () => {
               }}>
               <Cell row_index={row_index} col_index={col_index} grid={grid} />
             </TouchableHighlight>
-          )),
+          ))
         )}
       </View>
       <View style={styles.btnsContainer}>
@@ -78,10 +79,10 @@ const App = () => {
           }}
           style={[
             styles.button,
-            {display: 'flex'},
-            start ? {display: 'none'} : {},
+            { display: 'flex' },
+            start ? { display: 'none' } : {}
           ]}>
-          <Text style={{color: '#fff', fontSize: 20}}>Start</Text>
+          <Text style={{ color: '#fff', fontSize: 20 }}>Start</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -96,11 +97,11 @@ const App = () => {
               running_ref.current = false;
             }
           }}>
-          <Text style={{color: '#fff', fontSize: 20}}>Next</Text>
+          <Text style={{ color: '#fff', fontSize: 20 }}>Next</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.button, showBtn, autoGame ? {display: 'none'} : {}]}
+          style={[styles.button, showBtn, autoGame ? { display: 'none' } : {}]}
           onPress={() => {
             setAutoGame(!autoGame);
             stopAutoGame(true);
@@ -116,7 +117,7 @@ const App = () => {
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.button, showBtn, autoGame ? {display: 'none'} : {}]}
+          style={[styles.button, showBtn, autoGame ? { display: 'none' } : {}]}
           onPress={() => {
             stopAutoGame(false);
             setChangeText(false);
@@ -127,7 +128,7 @@ const App = () => {
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.button, showStop, !stopAuto ? {display: 'none'} : {}]}
+          style={[styles.button, showStop, !stopAuto ? { display: 'none' } : {}]}
           onPress={() => {
             setAutoGame(!autoGame);
             stopAutoGame(false);
@@ -144,17 +145,17 @@ const App = () => {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    flex: 1,
+    flex: 1
   },
   celdsContainer: {
     flex: 1.1,
     flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexWrap: 'wrap'
   },
   btnsContainer: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   button: {
     display: 'none',
@@ -163,15 +164,13 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    justifyContent: 'center',
-    alignItems: 'center',
     borderRadius: 10,
-    backgroundColor: '#38b000',
+    backgroundColor: '#38b000'
   },
   textBtns: {
     color: '#fff',
-    fontSize: 20,
-  },
+    fontSize: 20
+  }
 });
 
 export default App;

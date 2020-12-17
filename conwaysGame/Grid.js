@@ -8,7 +8,7 @@ const operations = [
   [1, 1],
   [-1, -1],
   [1, 0],
-  [-1, 0],
+  [-1, 0]
 ];
 const num_rows = 10;
 const num_cols = 10;
@@ -30,7 +30,7 @@ const Grid = {
     const rows = [];
     for (let i = 0; i < num_rows; i++) {
       rows.push(
-        Array.from(Array(num_cols), () => (Math.random() > 0.8 ? 1 : 0)),
+        Array.from(Array(num_cols), () => (Math.random() > 0.8 ? 1 : 0))
       );
     }
     return rows;
@@ -60,7 +60,7 @@ const Grid = {
         }
       }
     });
-  },
+  }
 };
 
 export default Grid;
